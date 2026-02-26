@@ -1,6 +1,10 @@
 cd %USERPROFILE%\Desktop
 cl /EHsc main.cpp user32.lib gdi32.lib winmm.lib Msimg32.lib
 
+vcruntime140.dll option
+
+cl /O2 /MD /EHsc /GS- /GR- /SUBSYSTEM:WINDOWS main.cpp user32.lib gdi32.lib
+
 Smaller compile
 
 cl tiny.cpp /nologo /Os /GS- /GR- /EHs- /EHc- ^
